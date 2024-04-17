@@ -1,4 +1,3 @@
-/* Google Font  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
 
@@ -25,6 +24,11 @@ section {
 }
 .skills-section{
   margin-top: -200px;
+}
+.header-left-side .hack{
+  display: flex;
+ margin-top: -180px;
+  justify-content: flex-end;
 }
 
 .spiderman{
@@ -107,6 +111,7 @@ button:hover {
   margin-top: 15%; /* Adjusted margin for smaller screens */
 }
 
+
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
   .context{
@@ -130,6 +135,7 @@ button:hover {
     font-size: 16px; /* Further adjusted font size for smaller screens */
   }
 }
+
 
 
 /* Navbar styles */
@@ -175,4 +181,23 @@ button:hover {
 .skills-section,
 .experience-section {
   scroll-margin-top: 80px; /* Adjust as needed depending on navbar height */
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
 }
