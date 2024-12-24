@@ -12,8 +12,14 @@
             <li><a href="#experience">My Experience</a></li>
 
             <li><a href="#skills">My Skills</a></li>
+            <li><a href="#projects">My Projects</a></li>
+
         </ul>
     </nav>
+    <audio autoplay loop id="marioAudio">
+        <source src="WhatsApp Audio 2024-04-17 at 19.50.42_4f40787d.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <img class=spiderman src="img/spiderman.gif" alt="">
     <img class="mario" src="img/bg.gif" alt="img" />
 <section>
@@ -28,7 +34,7 @@
             <p>
                 Hey,
             
-                I'm just someone who loves to code, listen to <a href="https://open.spotify.com/user/63kc63zz2gt4jf51akkl7ehem?si=02c6c1a446ca406a" target="_blank">music</a>, and watch movies. Drawing and designing stuff is also my jam. Coding is like solving puzzles for me. When I'm not doing that, I'm probably chilling with some good tunes or checking out the latest movies. Drawing lets me express myself, and I'm always doodling something fun.
+                I'm just someone who loves to code, listen to <a href="https://open.spotify.com/user/63kc63zz2gt4jf51akkl7ehem?si=02c6c1a446ca406a" target="_blank" class="music-link">music</a>, and watch movies. Drawing and designing stuff is also my jam. Coding is like solving puzzles for me. When I'm not doing that, I'm probably chilling with some good tunes or checking out the latest movies. Drawing lets me express myself, and I'm always doodling something fun.
             
                 So yeah, that's me - into tech, music, movies, and drawing. Currently Studying in UPES, if you ever wanna talk about any of that stuff, just give me a shout!
             
@@ -45,7 +51,13 @@
         <button ng-click="openLink('https://github.com/1KartikeyBhasin1')">Github</button>
         <br />
         <br>
+        <!-- New "Download Resume" Button with Same Styling as LinkedIn -->
+<button ng-click="openLink('assets/resume.pdf')" download="Kartikey_Bhasin_Resume">Download Resume</button>
+
+
+
     </div>
+    
     <div class="header-right-side">
         
     </div>
@@ -83,6 +95,40 @@
         </p>
     </div>
 </section>
+<section class="Projects_sec" id="projects">
+    <div class="header-left-side" >
+        <h1 class="Proj-text">
+            My Projects
+        </h1>
+        <p>Personal Portfolio Website | HTML5, CSS, JavaScript April 2024 – April 2024 <br>
+            • This is my project that I made in 4th semester for my ”Web Technologies” subject. I made a portfolio website that
+            showcases my skills, projects and contact information. <br>
+            • I used different css tools like, flexbox, grid, animations etc to enhance the beauty of this project. <br>
+            • AngularJS for form validation because it was mandatory to use it as per my project guidelines.
+        </p>
+        <p>Movie Ticket Booking System | Java, MySQL, VSCODE Oct. 2023 – Nov. 2023 <br>
+            • Developed a local menu driven hostel booking system where you can create a hostel as an owner and book a room
+            as a customer <br>
+            • All the data will be stored in backend (RDBMS) with MySQL</p>
+            <p>Movie Ticket Booking System with Python and MongoDB | Python, MongoDB March 2024 – April 2024  <br>
+                • Developed a local menu driven hostel booking system where you can create, read, update, delete a hostel. <br>
+                • You can book a room and filter hostels based on different conditions.</p>
+                <p>Movie Ticket Booking System | Java, MySQL, VSCODE Oct. 2023 – Nov. 2023
+                    • Developed a local menu driven hostel booking system where you can create a hostel as an owner and book a room
+                    as a customer
+                    • All the data will be stored in backend (RDBMS) with MySQL</p>
+                    <p>Sentiment Analysis System for College Feedback | March 2024 – April 2024 <br>
+                        • Data Collection: Built a website to collect feedback, storing data in Excel format. <br>
+                        • Preprocessing: Implemented stop word removal and lemmatization for noise reduction. <br>
+                        • Sentiment Analysis: Leveraged CoreNLP for sentiment classification and enhanced accuracy using a custom list of
+                        positive and negative words. <br>
+                        • Visualization: Designed an interactive website for visualizing analysis results using graphical summaries. <br>
+                        • Backend: Developed a RESTful API using Node.js and Express.js with MongoDB for efficient data handling. <br>
+                        • Statistical Evaluation: Applied statistical formulas to estimate proportions in feedback trends. enabling colleges to
+                        derive actionable insights, improving decision-making through accurate and scalable feedback analysis.</p>
+    </div>
+</section>
+
 <section></section>
 
 <script>
@@ -116,5 +162,19 @@
         }
     }
 </style>
+<script>
+    // JavaScript to play audio when hovering over the "music" link
+    const musicLink = document.querySelector('.music-link');
+    const marioAudio = document.getElementById('marioAudio');
+
+    musicLink.addEventListener('mouseenter', function() {
+        marioAudio.play();
+    });
+
+    musicLink.addEventListener('mouseleave', function() {
+        marioAudio.pause();
+        marioAudio.currentTime = 0;
+    });
+</script>
 </body>
 </html>
